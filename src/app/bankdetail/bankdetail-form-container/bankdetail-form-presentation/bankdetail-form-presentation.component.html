@@ -1,0 +1,121 @@
+<div class="container">
+    <form class="row" [formGroup]="bankdetailForm">
+        <div class="col-md-9">
+            <label for="accountno" class="form-label">Account NO: </label>
+            <input type="text" class="form-control" formControlName="accountno" id="accountno" required>
+        </div>
+        <span class="text-danger"
+            *ngIf="(bankdetailFormControl.accountno.touched || submitted) && bankdetailFormControl.accountno.errors?.required">
+            Account No is Required
+        </span>
+
+
+        <div class="col-md-9">
+            <label for="name" class="form-label">Account Holder Name: </label>
+            <input type="text" class="form-control" formControlName="name" id="name" required>
+        </div>
+        <span class="text-danger"
+            *ngIf="(bankdetailFormControl.name.touched || submitted) && bankdetailFormControl.name.errors?.required">
+            Name is required
+        </span>
+
+
+        <div class="col-md-9">
+            <label for="email" class="form-label">Email: </label>
+            <input type="text" class="form-control" formControlName="email" id="email" required>
+
+        </div>
+        <span class="text-danger"
+            *ngIf="(bankdetailFormControl.email.touched || submitted) && bankdetailFormControl.email.errors?.required">
+            Email is required
+        </span>
+
+        <div class="col-md-9">
+            <label for="phoneno" class="form-label">Phone No: </label>
+            <input type="text" class="form-control" formControlName="phoneno" id="phoneno" required>
+        </div>
+        <span class="text-danger"
+            *ngIf="(bankdetailFormControl.phoneno.touched || submitted) && bankdetailFormControl.phoneno.errors?.required">
+            Phone No is required
+        </span>
+
+        <div class="col-md-9">
+            <label for="bankname" class="form-label">Bank Name: </label>
+            <select class="form-select" id="bankname" formControlName="bankname" required>
+                <option selected disabled value="">Choose...</option>
+                <option>BOB</option>
+                <option>SBI</option>
+                <option>HDFC</option>
+                <option>ICICI</option>
+            </select>
+        </div>
+        <span class="text-danger"
+            *ngIf="(bankdetailFormControl.bankname.touched || submitted) && bankdetailFormControl.bankname.errors?.required">
+            Bank Name is required
+        </span>
+
+        <div class="col-md-9">
+            <label for="gender" class="form-label">Radio: </label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="male" formControlName='gender'
+                    value="male" checked>
+                <label class="form-check-label" for="male">
+                    Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" formControlName='gender' id="female"
+                    value="female">
+                <label class="form-check-label" for="female">
+                    Female
+                </label>
+            </div>
+        </div>
+
+        <span class="text-danger"
+            *ngIf="(bankdetailFormControl.gender.touched || submitted) && bankdetailFormControl.gender.errors?.required">
+            Your Gender is required
+        </span>
+
+        <div class="col-md-9">
+            <label for="address" class="form-label">Address: </label>
+            <input type="text" class="form-control" formControlName='address' id="address" required>
+        </div>
+        <span class="text-danger"
+            *ngIf="(bankdetailFormControl.address.touched || submitted) && bankdetailFormControl.address.errors?.required">
+            Your Address is required
+        </span>
+
+        <div class="col-md-9">
+            <label for="Amount" class="form-label">Basic Salary: </label>
+            <input type="text" class="form-control" formControlName='Amount' id="amount" required>
+        </div>
+        <span class="text-danger"
+            *ngIf="(bankdetailFormControl.Amount.touched || submitted) && bankdetailFormControl.Amount.errors?.required">
+            Your Basic Salary is required
+        </span>
+
+
+        <div class="col-md-9">
+            <label for="currencycode" class="form-label">Currency Code:</label>
+            <select class="form-select" id="currencycode" formControlName='currencycode' required>
+                <option selected disabled value="">Choose...</option>
+                <option>INR</option>
+                <option>USD</option>
+                <option>EURO</option>
+                <option>CAD</option>
+            </select>
+        </div>
+        <span class="text-danger"
+            *ngIf="(bankdetailFormControl.currencycode.touched || submitted) && bankdetailFormControl.currencycode.errors?.required">
+            Your Currency Code is required
+        </span>
+
+        <div class="col-9">
+            <button class="btn btn-primary" type="submit" [disabled]="!bankdetailForm.valid"
+                (click)="onSubmit()">Submit</button>
+            <input class="btn btn-primary" type="reset" value="Clear">
+        </div>
+
+    </form>
+</div>
