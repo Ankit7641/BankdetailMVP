@@ -20,7 +20,7 @@
                 <th scope="col">Gender</th>
                 <th scope="col">Address</th>
                 <th scope="col">Amount</th>
-                <th scope="col">Currency Code</th>
+               <!--  <th scope="col">Currency Code</th> -->
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -34,11 +34,10 @@
                 <td> {{bankdetail.bankname}} </td>
                 <td> {{bankdetail.gender}} </td>
                 <td> {{bankdetail.address}} </td>
-                <td> {{bankdetail.Amount}} </td>
-                <td> {{bankdetail.currencycode}} </td>
+                <td> {{bankdetail.currencycode + bankdetail.Amount}} </td>
+                <!-- <td> {{bankdetail.currencycode}} </td> -->
                 <td class="text-center">
-                    <button class="btn btn-outline-primary m-1" data-toggle="tooltip" data-placement="right"
-                        title="Edit" routerLink="/bankdetail/{{bankdetail.id}}">
+                    <button class="btn btn-outline-primary m-1" data-toggle="tooltip" data-placement="right" title="Edit" routerLink="/bankdetail/Edit/{{bankdetail.id}}">
                         Edit
                     </button>
 

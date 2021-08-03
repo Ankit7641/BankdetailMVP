@@ -41,7 +41,7 @@ export class BankdetailService {
   }
 
   // Get Method to fetch Data
-  getEmployee(id: string): Observable<Bankdetail> {
+  getBankdetail(id: string): Observable<Bankdetail> {
     return this.http.get<Bankdetail>(this.apiURL + '/bank/' + id)
   }
 

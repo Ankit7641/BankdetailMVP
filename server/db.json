@@ -1,16 +1,16 @@
 {
   "bank": [
     {
-      "id": 1,
       "accountno": "0685214589",
       "name": "Ankit",
       "email": "ankit@gmail.com",
       "phoneno": "7532145896",
       "bankname": "ICICI",
-      "gender": "Male",
+      "gender": "male",
       "address": "valsad",
       "Amount": "50000",
-      "currencycode": "INR"
+      "currencycode": "$",
+      "id": 1
     },
     {
       "id": 2,
@@ -37,14 +37,14 @@
       "currencycode": "UK"
     },
     {
-      "accountno": 123,
-      "name": "Ankit",
-      "email": "ankit@gmail.com",
-      "phoneno": 1234,
-      "bankname": "SBI",
-      "gender": "male",
-      "address": "valsad",
-      "Amount": "125",
+      "accountno": "00682154",
+      "name": "Ankita",
+      "email": "ankita@gmail.com",
+      "phoneno": "1234589632",
+      "bankname": "HDFC",
+      "gender": "female",
+      "address": "navsari",
+      "Amount": "250000",
       "currencycode": "EURO",
       "id": 9
     },
@@ -71,6 +71,54 @@
       "Amount": "25000",
       "currencycode": "INR",
       "id": 12
+    },
+    {
+      "accountno": "1234568",
+      "name": "Ankit",
+      "email": "ankit@gmail.com",
+      "phoneno": "9852147630",
+      "bankname": "HDFC",
+      "gender": "male",
+      "address": "ved Avenue valsad",
+      "Amount": "2587452",
+      "currencycode": "EURO",
+      "id": 13
+    },
+    {
+      "accountno": "1234568",
+      "name": "karishma",
+      "email": "ankit@gmail.com",
+      "phoneno": "9852147630",
+      "bankname": "SBI",
+      "gender": "female",
+      "address": "valsad",
+      "Amount": "25000",
+      "currencycode": "USD",
+      "id": 14
+    },
+    {
+      "accountno": "456985",
+      "name": "Bhavik",
+      "email": "bhavik@gmail.com",
+      "phoneno": "7563214890",
+      "bankname": "BOB",
+      "gender": "male",
+      "address": "Atul",
+      "Amount": "250000",
+      "currencycode": "INR",
+      "id": 15
+    },
+    {
+      "accountno": "125478569",
+      "name": "Dhruvit",
+      "email": "dhruvit@gmail.com",
+      "phoneno": "9852147630",
+      "bankname": "SBI",
+      "gender": "male",
+      "address": "mogravadi",
+      "Amount": "25000",
+      "currencycode": "₹",
+      "id": 16
     }
   ]
 }

@@ -32,7 +32,7 @@
 
         <div class="col-md-9">
             <label for="phoneno" class="form-label">Phone No: </label>
-            <input type="text" class="form-control" formControlName="phoneno" id="phoneno" required>
+            <input type="text" class="form-control" formControlName="phoneno" id="phoneno" required mask="9999990*.99">
         </div>
         <span class="text-danger"
             *ngIf="(bankdetailFormControl.phoneno.touched || submitted) && bankdetailFormControl.phoneno.errors?.required">
@@ -100,10 +100,10 @@
             <label for="currencycode" class="form-label">Currency Code:</label>
             <select class="form-select" id="currencycode" formControlName='currencycode' required>
                 <option selected disabled value="">Choose...</option>
-                <option>INR</option>
-                <option>USD</option>
-                <option>EURO</option>
-                <option>CAD</option>
+                <option value="₹">INR</option>
+                <option value="$">USD</option>
+                <option value="#">EURO</option>
+                <option value="%">CAD</option>
             </select>
         </div>
         <span class="text-danger"
@@ -112,8 +112,7 @@
         </span>
 
         <div class="col-9">
-            <button class="btn btn-primary" type="submit" [disabled]="!bankdetailForm.valid"
-                (click)="onSubmit()">Submit</button>
+            <button class="btn btn-primary" type="submit" [disabled]="!bankdetailForm.valid" (click)="onSubmit()">Submit</button>
             <input class="btn btn-primary" type="reset" value="Clear">
         </div>
 
